@@ -18,6 +18,7 @@ app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 sql_alch_url = "SQLALCHEMY_DATABASE_URI"
 app.config[sql_alch_url] = "sqlite:///" + os.path.join(basedir,'data.sqlite')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 # Add Models here
