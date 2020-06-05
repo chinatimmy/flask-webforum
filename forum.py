@@ -10,7 +10,7 @@ Support image posting
 
 
 import os
-from flask import Flask
+from flask import Flask, render_template
 from markupsafe import escape
 from flask_sqlalchemy import SQLAlchemy
 
@@ -20,10 +20,13 @@ sql_alch_url = "SQLALCHEMY_DATABASE_URI"
 app.config[sql_alch_url] = "sqlite:///" + os.path.join(basedir,'data.sqlite')
 db = SQLAlchemy(app)
 
+# Add Models here
 class Post(db.Model):
     __tablename__ = "posts"
     id=db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(64), unique=False, index=True)
+
+
 db.drop_all()
 db.create_all()
 
@@ -41,7 +44,9 @@ def index(your_post):
     newPost = Post(content=escape(your_post))
     db.session.add(newPost)
     db.session.commit()
-    return "<em>Append your message to the URL</em> <br>Your Post: <b> " + str(your_post) + """</b><iframe scrolling="yes" width="100%" height="95%" style="border:0px solid black;" src="/posts/" title="Posts"></iframe>"""
+    return render_template("index.html", post={"data":your_post})
+
+
 
 @app.route('/posts/')
 def showAll():
