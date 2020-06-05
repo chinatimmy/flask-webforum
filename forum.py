@@ -64,6 +64,6 @@ if __name__ == '__main__':
 
 '''
 to start the server run these commands
-export FLASK_APP=Gaynigger.py
+export FLASK_APP=forum.py
 flask run
 '''
