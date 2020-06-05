@@ -4,6 +4,8 @@ Kek or Cringe??
 
 You decide.
 
+Demo @ https://goblinnet.xyz
+
 ## ToDo:
  * Break after Length
  * Fix SQLALCHEMY_TRACK_MODIFICATIONS error
