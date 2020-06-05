@@ -1,63 +1,70 @@
 '''
-to start the server run these commands
-touch data.sqlite
-export FLASK_APP=forum.py
-flask run
+    To start the server, run these commands!
+
+    touch data.sqlite
+    export FLASK_APP=forum.py
+    flask run
+
 '''
-
-
 import os
 from flask import Flask, render_template
 from markupsafe import escape
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
-sql_alch_url = "SQLALCHEMY_DATABASE_URI"
-app.config[sql_alch_url] = "sqlite:///" + os.path.join(basedir,'data.sqlite')
+BASEDIR = os.path.abspath(os.path.dirname(__file__))
+SQL_ALCH_URL = "SQLALCHEMY_DATABASE_URI"
+app.config[SQL_ALCH_URL] = "sqlite:///" + os.path.join(BASEDIR, 'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-db = SQLAlchemy(app)
+DB = SQLAlchemy(app)
 
-# Add Models here
-class Post(db.Model):
+class Post(DB.Model):
+    '''
+        add models here
+    '''
     __tablename__ = "posts"
-    id=db.Column(db.Integer, primary_key=True)
-    content = db.Column(db.String(64), unique=False, index=True)
+    id = DB.Column(DB.Integer, primary_key=True)
+    content = DB.Column(DB.String(64), unique=False, index=True)
 
-
-db.drop_all()
-db.create_all()
+DB.drop_all()
+DB.create_all()
 
 @app.route('/favicon.ico')
 def favicon():
+    '''
+        returns ""
+    '''
     return ""
 
 @app.route('/')
 def landing():
-    
-    allPosts = Post.query.all()
-    return render_template("index.html", post={"data":"","allposts":reversed(allPosts)})
+    '''
+        display the landing page
+    '''
+    all_posts = Post.query.all()
+    return render_template("index.html", post={"data":"", "allposts":reversed(all_posts)})
 
 @app.route('/<your_post>')
 def index(your_post):
+    '''
+        display the initial page, plus your post
+    '''
     your_post = str(your_post[:128])
-    newPost = Post(content=escape(your_post))
-    db.session.add(newPost)
-    db.session.commit()
+    new_post = Post(content=escape(your_post))
+    DB.session.add(new_post)
+    DB.session.commit()
 
-    allPosts = Post.query.all()
+    all_posts = Post.query.all()
 
-    return render_template("index.html", post={"data":your_post,"allposts":reversed(allPosts)})
-
-
+    return render_template("index.html", post={"data":your_post, "allposts":reversed(all_posts)})
 
 @app.route('/posts/')
-def showAll():
+def show_all():
+    '''
+        returns ""
+    '''
     text = ""
-    return(text)
+    return text
 
 if __name__ == '__main__':
     app.run()
-
-
-
