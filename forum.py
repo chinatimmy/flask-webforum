@@ -1,11 +1,8 @@
 '''
-ToDo:
-Break after Length
-Fix SQLALCHEMY_TRACK_MODIFICATIONS error
-Formatting support for certian markup with CSS
-Support image posting
-Pages
-Replies
+to start the server run these commands
+touch data.sqlite
+export FLASK_APP=forum.py
+flask run
 '''
 
 
@@ -63,8 +60,4 @@ if __name__ == '__main__':
     app.run()
 
 
-'''
-to start the server run these commands
-export FLASK_APP=forum.py
-flask run
-'''
+
