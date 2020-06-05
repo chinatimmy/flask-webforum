@@ -3,5 +3,6 @@
 <br>Your Post: <b>{{post["data"]}}</b>
 <br/><br/><br/>
 {% for comment in post["allposts"] %}
+<span style="color:#DABDAB;">{{ comment.id }} : </span>
 <span>{{ comment.content }}</span> <br/>
 {% endfor %}
