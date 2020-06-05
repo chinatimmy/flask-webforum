@@ -1,4 +1,7 @@
 
 <em>Append your message to the URL</em> 
 <br>Your Post: <b>{{post["data"]}}</b>
-<iframe scrolling="yes" width="100%" height="95%" style="border:0px solid black;" src="/posts/" title="Posts"></iframe>
+<br/><br/><br/>
+{% for comment in post["allposts"] %}
+<span>{{ comment.content }}</span> <br/>
+{% endfor %}

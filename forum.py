@@ -36,7 +36,9 @@ def favicon():
 
 @app.route('/')
 def landing():
-    return "<em>Append your message to the URL</em>"
+    
+    allPosts = Post.query.all()
+    return render_template("index.html", post={"data":"","allposts":reversed(allPosts)})
 
 @app.route('/<your_post>')
 def index(your_post):
@@ -44,17 +46,16 @@ def index(your_post):
     newPost = Post(content=escape(your_post))
     db.session.add(newPost)
     db.session.commit()
-    return render_template("index.html", post={"data":your_post})
+
+    allPosts = Post.query.all()
+
+    return render_template("index.html", post={"data":your_post,"allposts":reversed(allPosts)})
 
 
 
 @app.route('/posts/')
 def showAll():
-    allPosts = Post.query.all()
     text = ""
-    for post in reversed(allPosts):
-        print(post.content)
-        text = text + str(post.content) + "<br/>"
     return(text)
 
 if __name__ == '__main__':
