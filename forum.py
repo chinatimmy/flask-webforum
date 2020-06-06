@@ -43,7 +43,7 @@ def landing():
     '''
     if request.method == 'POST':
         your_post = str(request.form['post'][:128])
-        new_post = Post(content=escape(your_post))
+        new_post = Post(content=str(your_post))
         DB.session.add(new_post)
         DB.session.commit()
 

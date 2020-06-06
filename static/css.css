@@ -1,6 +1,4 @@
 @charset 'utf-8';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
 html, body {
 	margin: 0;
 
@@ -9,7 +7,7 @@ html, body {
 
 body {
 	color: #222;
-	font-family: 'Poppins', 'Helvetica Neue', 'Arial', sans-serif;
+	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	line-height: 1.5;
 }
 
