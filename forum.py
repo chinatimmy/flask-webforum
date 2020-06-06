@@ -35,7 +35,7 @@ def favicon():
     return ""
 
 @app.route('/', methods=['GET', 'POST'])
-def landing():
+def posts():
     '''
         display the landing page
     '''
@@ -52,7 +52,8 @@ def landing():
     return render_template("index.html", post={
         "posted": request.method == 'POST',
         "allposts": reversed(all_posts)
-    })
+    }     
+)
 
 if __name__ == '__main__':
     app.run()
