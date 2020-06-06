@@ -1,3 +1,5 @@
+![logo](https://raw.githubusercontent.com/chinatimmy/flask-webforum/images/fwftxtboard.png)
+
 # flask-webforum
 
 Kek or Cringe?? 
