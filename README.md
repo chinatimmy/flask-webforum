@@ -15,3 +15,4 @@ To start the server, run these commands!
     export FLASK_APP=forum.py
     flask run
 
+[![Demo vid](https://i.ytimg.com/vi/ycV6cnK3SIs/hqdefault.jpg)](https://www.youtube.com/watch?v=pPw_izFr5PA "Demo")
