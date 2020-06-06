@@ -1,10 +1,8 @@
 '''
     To start the server, run these commands!
-
     touch data.sqlite
     export FLASK_APP=forum.py
     flask run
-
 '''
 import os
 from flask import Flask, render_template, request
@@ -43,6 +41,8 @@ def landing():
     '''
     if request.method == 'POST':
         your_post = str(request.form['post'][:128])
+        if len(your_post) == 0:
+            return "more length plz"
         new_post = Post(content=str(your_post))
         DB.session.add(new_post)
         DB.session.commit()

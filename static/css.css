@@ -1,14 +1,13 @@
 @charset 'utf-8';
 html, body {
 	margin: 0;
-
-	padding: 0;
+    padding: 0;
 }
 
 body {
 	color: #222;
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
-	line-height: 1.5;
+    line-height: 1.5;
 }
 
 button,
@@ -48,8 +47,15 @@ input[type='submit']:active {
 .container {
 	max-width: 720px;
 	margin: 0 auto;
-
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 50%;
+    width: 50%;
 	padding: 1rem;
+}
+
+input {
+    
 }
 
 .main-header,
@@ -128,8 +134,7 @@ input[type='submit']:active {
 	border: none;
 	outline: none;
 	resize: none;
-
-	color: inherit;
+    color: inherit;
 	font-family: inherit;
 	font-size: 1rem;
 }
