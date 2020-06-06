@@ -7,7 +7,7 @@
 
 '''
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from markupsafe import escape
 from flask_sqlalchemy import SQLAlchemy
 
@@ -36,27 +36,23 @@ def favicon():
     '''
     return ""
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def landing():
     '''
         display the landing page
     '''
-    all_posts = Post.query.all()
-    return render_template("index.html", post={"data":"", "allposts":reversed(all_posts)})
-
-@app.route('/<your_post>')
-def index(your_post):
-    '''
-        display the initial page, plus your post
-    '''
-    your_post = str(your_post[:128])
-    new_post = Post(content=escape(your_post))
-    DB.session.add(new_post)
-    DB.session.commit()
+    if request.method == 'POST':
+        your_post = str(request.form['post'][:128])
+        new_post = Post(content=escape(your_post))
+        DB.session.add(new_post)
+        DB.session.commit()
 
     all_posts = Post.query.all()
 
-    return render_template("index.html", post={"data":your_post, "allposts":reversed(all_posts)})
+    return render_template("index.html", post={
+        "posted": request.method == 'POST',
+        "allposts": reversed(all_posts)
+    })
 
 @app.route('/posts/')
 def show_all():
