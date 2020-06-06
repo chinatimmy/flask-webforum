@@ -1,3 +1,137 @@
-.scalezor69 {
-    word-wrap: break-word;
-  }
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+	margin: 0;
+
+	padding: 0;
+}
+
+body {
+	color: #222;
+	font-family: 'Poppins', 'Helvetica Neue', 'Arial', sans-serif;
+	line-height: 1.5;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+	background-color: #fff;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .125), 0 1px 4px rgba(0, 0, 0, .125);
+	outline: none;
+
+	padding: .25rem 1rem;
+
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+
+	transition: color .8s, background-color .8s, box-shadow .8s;
+}
+
+button:hover,
+input[type='button']:hover,
+input[type='submit']:hover {
+	box-shadow: 0 3px 4px rgba(0, 0, 0, .125), 0 2px 6px rgba(0, 0, 0, .125);
+
+
+	transition: color .2s, background-color .2s, box-shadow .2s;
+}
+
+button:active,
+input[type='button']:active,
+input[type='submit']:active {
+	background-color: #eee;
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+
+	padding: 1rem;
+}
+
+.main-header,
+.main-section {
+	padding: 2rem 0;
+}
+
+.main-section + .main-section {
+	padding-top: 0;
+}
+
+.main-section + .main-section::before {
+	display: block;
+	position: relative;
+	left: 45%;
+	width: 10%;
+
+	padding-bottom: 2rem;
+
+	border-top: .75px rgba(0, 0, 0, .125) solid;
+	
+	content: '';
+}
+
+.logo {
+	margin: 0;
+
+	color: #000;
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+.section-header, .post-header {
+	margin-bottom: .5rem;
+}
+
+.section-title, .post-title {
+	display: inline;
+	margin: 0;
+
+	font-size: 1rem;
+}
+
+.post {
+	box-sizing: border-box;
+
+	margin: 2rem 0;
+}
+
+.post-content {
+	margin: 0;
+}
+
+
+.button-row {
+	text-align: right;
+}
+
+.badge {
+	margin-left: .5rem;
+
+	padding: .0625rem .5rem;
+	vertical-align: middle;
+
+	border: .75px black solid;
+	border-radius: 2px;
+
+	font-size: .75rem;
+	font-weight: 300;
+}
+
+.seamless-text-input {
+	width: 100%;
+	height: 6rem;
+
+	border: none;
+	outline: none;
+	resize: none;
+
+	color: inherit;
+	font-family: inherit;
+	font-size: 1rem;
+}
