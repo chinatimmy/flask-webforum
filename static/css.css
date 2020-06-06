@@ -54,10 +54,6 @@ input[type='submit']:active {
 	padding: 1rem;
 }
 
-input {
-    
-}
-
 .main-header,
 .main-section {
 	padding: 2rem 0;
@@ -134,7 +130,8 @@ input {
 	border: none;
 	outline: none;
 	resize: none;
-    color: inherit;
+
+	color: inherit;
 	font-family: inherit;
 	font-size: 1rem;
 }
