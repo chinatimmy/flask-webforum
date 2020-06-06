@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<meta http-equiv="refresh" content="200">
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Flask Web Forum</title>
+	<title>Flask Web Forum!</title>
 	<link rel="stylesheet" type="text/css" href="/static/css.css" />
+	<link rel="icon" href="/static/favicon.ico">
+	<meta http-equiv="refresh" content="200">
+	<meta property="og:description" content="TxT Board">
 </head>
 
 	<body>
@@ -24,7 +26,7 @@
 				<form method="post">
 				
 					{{ form.hidden_tag() }}
-					{{ form.textContent(class="seamless-text-input", placeholder="Type your message here...") }}
+					{{ form.text_content(class="seamless-text-input", placeholder="Type your message here...") }}
 					
 					<div class="button-row">
 						{{ form.submit(value="Post") }}
@@ -44,6 +46,7 @@
 								{{ ' <span class="badge">Your Post</span>'|safe}}
 							{% endif %}
 								<span class="badge">{{ comment.ipHash  }}</span>
+								<span class="badge">{{ comment.timestamp  }}</span>
 						
 						</header>
 						<p class="post-content">
