@@ -47,11 +47,9 @@ input[type='submit']:active {
 .container {
 	max-width: 720px;
 	margin: 0 auto;
-    word-wrap: break-word;
-    word-break: break-all;
-    height: 50%;
-    width: 50%;
-	padding: 1rem;
+   	word-wrap: break-word;
+        word-break: break-all;
+        padding: 1rem;
 }
 
 .main-header,
