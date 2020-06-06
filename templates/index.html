@@ -40,7 +40,6 @@
 					<article class="post">
 						<header class="post-header">
 							<h2 class="post-title">Post #{{ comment.id }} </h2>
-							
 							{% if myIp == comment.ipHash %}
 								{{ ' <span class="badge">Your Post</span>'|safe}}
 							{% endif %}

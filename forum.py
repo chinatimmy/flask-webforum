@@ -52,9 +52,8 @@ def posts():
     '''
 
     postForm = PostForm()
-
     requestIp = request.remote_addr
-    ip_hash=hashlib.sha224(bytes(str(requestIp),"utf-8" ) ).hexdigest()[-8:]
+    ip_hash=hashlib.sha224(bytes(str(requestIp),"utf-8" ) ).hexdigest()[-16:]
     
     if postForm.validate_on_submit():
 
