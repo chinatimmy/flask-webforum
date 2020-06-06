@@ -54,13 +54,5 @@ def landing():
         "allposts": reversed(all_posts)
     })
 
-@app.route('/posts/')
-def show_all():
-    '''
-        returns ""
-    '''
-    text = ""
-    return text
-
 if __name__ == '__main__':
     app.run()
