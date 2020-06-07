@@ -3,8 +3,7 @@ from config import *
     Models below
 '''
 
-DB.drop_all()
-DB.create_all()
+
 
 class Post(DB.Model):
     '''
