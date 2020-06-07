@@ -20,13 +20,10 @@ def posts():
 
     if post_form.validate_on_submit():
         text_content = post_form.text_content.data
-        your_post = str(text_content[:128])
-    
-        if len(your_post) == 0:
-            return render_template("error.html")
     
         # Hash their IP and take the last 8 characters
-        new_post = Post(content=str(your_post), ipHash=ip_hash, timestamp=sys_time)
+        new_post = Post(content=str(text_content), ipHash=ip_hash, timestamp=sys_time)
+        
         # refresh database
         DB.session.add(new_post)
         DB.session.commit()
