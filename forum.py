@@ -86,7 +86,7 @@ def kek():
 @app.route('/53d42a86ade', methods=['GET'])
 def null():
     codes = random.choice([301, 302])
-    riteroute = random.choice(['null', 'kek', 'null', 'null', 'land'])
+    riteroute = random.choice(['null', 'null', 'null', 'land'])
     sleep(1)
     return redirect(url_for(riteroute), code=codes)
 
