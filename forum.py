@@ -92,7 +92,7 @@ def null():
 
 @app.route('/edea1ade8ae', methods=['GET'])
 def land():
-    codes = random.choice([301, 302, 307, 300, 304])
+    codes = random.choice([301, 302, 300, 304])
     return redirect(url_for('posts'), code=codes)
 
 '''
