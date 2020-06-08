@@ -32,5 +32,5 @@ To start the server, run these commands!
 - Join our XMPP muc @ bicc-dicc-nation@chat.404.city
 
   
-
+## 6ix9ine Video to display our inspiration for this forum
 [![Demo vid](https://i.ytimg.com/vi/ycV6cnK3SIs/hqdefault.jpg)](https://www.youtube.com/watch?v=pPw_izFr5PA "Demo")
