@@ -7,7 +7,7 @@ Kek or Cringe??
 
 You decide.
 
-*FWF* is powered by Python3 and built on a Sqlite database.  It uses  *POST requests* for instant interactions. *FWF* has many modern features out of the box such as XSS security integration and Text based discussions. *FWF* keeps a light foot print and is compatible with older browsers. We want to be as inclusive as possilbe. All walks of life are considered equal and so does our code. We love the great people we work with and it empowers us to strive to our greatest potential. Honestly, we will give you unconditinal love if you make commits. 
+*FWF* is powered by Python3 and built on a Sqlite database.  It uses  *POST requests* for instant interactions. *FWF* has many modern features out of the box such as XSS security integration and Text based discussions. *FWF* keeps a light foot print and is compatible with older browsers. We want to be as inclusive as possilbe. All walks of life are considered equal and so does our code. We love the great people we work with and it empowers us to strive to our greatest potential. Honestly, we will give you unconditinal love if you make commits... not gonna' lie! 
 
 Demo @ https://goblinnet.xyz
 
