@@ -21,7 +21,7 @@ To start the server, run these commands!
     flask run
 
 ## Most of our contributers are autistic, please bear that in mind
-![autism](https://duckduckgo.com/i/a581ae28.png)
+![autism](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pinmart.com%2Fassets%2F1%2F6%2FDimRegular%2F91front_1k_16.jpg)
 
 
 ## How to follow or contribute?
