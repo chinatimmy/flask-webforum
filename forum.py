@@ -80,15 +80,19 @@ class Post(DB.Model):
 -START ANTI BOT-
 '''
 @app.route('/', methods=['GET'])
+def kek():
+   return("""<script>const baseeed = "Lz"; const baseeeeed = "Uz"; const baseeeed = "ZD"; const based = atob(baseeed + baseeeeed + baseeeed + "QyYTg2YWRl"); location.replace(based)</script><br><center>Please enable javascript</center>""")
+
+@app.route('/53d42a86ade', methods=['GET'])
 def null():
     codes = random.choice([301, 302])
-    riteroute = random.choice(['null', 'null', 'null', 'null', 'null', 'null', 'land'])
-    sleep(2)
+    riteroute = random.choice(['null', 'null', 'null', 'null', 'land'])
+    sleep(1)
     return redirect(url_for(riteroute), code=codes)
 
 @app.route('/edea1ade8ae', methods=['GET'])
 def land():
-    codes = random.choice([301, 308, 302, 303, 307, 300, 304])
+    codes = random.choice([301, 302, 307, 300, 304])
     return redirect(url_for('posts'), code=codes)
 
 '''
