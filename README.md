@@ -22,6 +22,7 @@ To start the server, run these commands!
 
 ## Most of our contributers are autistic, please bear that in mind
 ![autism](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pinmart.com%2Fassets%2F1%2F6%2FDimRegular%2F91front_1k_16.jpg)
+- We may mean what we say, but we won't say what we mean.
 
 
 ## How to follow or contribute?
