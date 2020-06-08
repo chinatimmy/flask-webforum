@@ -34,3 +34,9 @@ To start the server, run these commands!
   
 ## 6ix9ine Video to display our inspiration for this forum
 [![Demo vid](https://i.ytimg.com/vi/ycV6cnK3SIs/hqdefault.jpg)](https://www.youtube.com/watch?v=pPw_izFr5PA "Demo")
+
+## Credits
+- chinatimmy~ Project Manager & Cheef Arciteket & Kodemaster
+- lispfan1987~ Jr. BE/FE Engineer & Brain Surgeon & Cheef of Security
+- schattenpanzer~ Sr. BE Engineer & Technology Advocate & Diversity Engineer 
+- m132~ Cheef UX & UI Designer & Head of Product Embracement
