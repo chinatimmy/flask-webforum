@@ -1,6 +1,6 @@
 ![logo](https://raw.githubusercontent.com/chinatimmy/flask-webforum/images/fwftxtboard.png)
 
-# Flask Web Forum!
+# Flask Web Forum in Python3!
 ## TxT Board
 
 Kek or Cringe?? 
