@@ -20,6 +20,8 @@ To start the server, run these commands!
     /Powershell/ $env:FLASK_APP = "forum"
     flask run
 
+## Most of our contributers are autistic, please bear that in mind
+![autism](https://duckduckgo.com/i/a581ae28.png)
 
 
 ## How to follow or contribute?
