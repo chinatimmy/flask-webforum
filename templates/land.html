@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Flask Web Forum!</title>
+	<link rel="stylesheet" type="text/css" href="/static/css.css" />
+	<link rel="icon" href="/static/favicon.ico">
+	<meta property="og:description" content="TxT Board">
+</head>
+
+	<body>
+		
+		<div class="container">
+			
+			<header class="main-header">
+				<img src="/static/fwftxtboard.webp" class="logo" alt="Flask Web Forum"/>
+			</header>
+			
+			<section class="main-section">
+				<header class="section-header">
+					<h2 class="section-title">Your message</h2>
+				</header>
+				
+				<form method="post">
+				<div class="post">
+					{{ form.hidden_tag() }}
+					{{ form.text_content(class="seamless-text-input", placeholder="Type your message here...") }}
+				</div>
+					<div class="button-row">
+						{{ form.submit(value="Post") }}
+					</div>
+				
+				</form>
+			</section>
+		<section class=posts>
+			{% include "posts.html" ignore missing %}
+		</section>
+		</div>
+
+	</body>
+
+</html>

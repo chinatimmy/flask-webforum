@@ -1,0 +1,20 @@
+<section class="main-section">			
+    {% for comment in post["allposts"] %}
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title">Post #{{ comment.id }} </h2>
+                {% if myIp == comment.ipHash %}
+                    {{ ' <span class="badge">Your Post</span>'|safe}}
+                {% endif %}
+                    <span class="badge">{{ comment.ipHash  }}</span>
+                    <span class="badge">{{ comment.timestamp  }}</span>
+            
+            </header>
+            <p class="post-content">
+                {{ comment.content }}
+                
+            </p>
+        </article>
+    {% endfor %}
+
+</section>
