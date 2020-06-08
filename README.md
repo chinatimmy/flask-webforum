@@ -7,7 +7,7 @@ Kek or Cringe??
 
 You decide.
 
-*FWF* is powered by Python and built on a Sqlite database.  It uses  *POST requests* for instant interactions. *FWF* has many modern features out of the box such as XSS security integration and Text based discussions. *FWF* keeps a light foot print and is compatible with older browsers.
+*FWF* is powered by Python3 and built on a Sqlite database.  It uses  *POST requests* for instant interactions. *FWF* has many modern features out of the box such as XSS security integration and Text based discussions. *FWF* keeps a light foot print and is compatible with older browsers. We want to be as inclusive as possilbe. All walks of life are considered equal and so does our code. We love the great people we work with and it empowers us to strive to our greatest potential. Honestly, we will give you unconditinal love if you make commits. 
 
 Demo @ https://goblinnet.xyz
 
@@ -16,7 +16,8 @@ Demo @ https://goblinnet.xyz
 To start the server, run these commands!
 
     touch data.sqlite
-    export FLASK_APP=forum.py
+    /Bash/       export FLASK_APP=forum.py
+    /Powershell/ $env:FLASK_APP = "forum"
     flask run
 
 
