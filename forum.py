@@ -5,6 +5,7 @@
 import os
 import hashlib
 import random
+import uuid; uuid.uuid4().hex.upper()[0:6]
 from time import strftime, sleep
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -22,10 +23,12 @@ from werkzeug.utils import secure_filename
  |_____|_| |_|_|\__|
 '''
 app = Flask(__name__)
-
+rand1 = str(uuid.uuid4())
+rand2 = str(uuid.uuid4())
+rand3 = str(uuid.uuid4())
+rand4 = str(uuid.uuid4())
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 SQL_ALCH_URL = "SQLALCHEMY_DATABASE_URI"
-
 app.config[SQL_ALCH_URL] = "sqlite:///" + os.path.join(BASEDIR, 'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'you-will-never-guess'
@@ -33,7 +36,8 @@ app.config['UPLOAD_FOLDER'] = "/uploads"
 DB = SQLAlchemy(app)
 
 # Limit how many posts are stored in the database
-POST_LIMIT = 500
+POST_LIMIT = 6969
+
 
 '''
   ______
@@ -80,25 +84,25 @@ class Post(DB.Model):
 -START ANTI BOT-
 '''
 @app.route('/', methods=['GET'])
-def kek():
-   return("""<script>const baseeed = "Lz"; const baseeeeed = "Uz"; const baseeeed = "ZD"; const based = atob(baseeed + baseeeeed + baseeeed + "QyYTg2YWRl"); location.replace(based)</script><br><center>Please enable javascript</center>""")
-
-@app.route('/53d42a86ade', methods=['GET'])
 def null():
-    codes = random.choice([301, 302])
-    riteroute = random.choice(['null', 'null', 'null', 'land'])
-    sleep(1)
+    codes = random.choice([307, 303])
+    riteroute = random.choice(['null', 'null', 'land'])
+    sleepytime = random.choice([1,2,3])
+    sleep(sleepytime)
     return redirect(url_for(riteroute), code=codes)
 
-@app.route('/edea1ade8ae', methods=['GET'])
+@app.route('/b/' + rand2 + "/bb/" + rand3, methods=['GET'])
 def land():
-    codes = random.choice([301, 302, 300, 304])
-    return redirect(url_for('posts'), code=codes)
+    codes = random.choice([307, 303])
+    riteroute = random.choice(['posts', 'null', 'land'])
+    sleepytime = random.choice([1,2,3])
+    sleep(sleepytime)
+    return redirect(url_for(riteroute), code=codes)
 
 '''
 -END ANTI BOT-
 '''
-@app.route('/fed4259ce01', methods=['GET', 'POST'])
+@app.route('/a/' + rand1 + "/aa/" + rand3 + "/aaa/" + rand2, methods=['GET', 'POST'])
 def posts():
     '''
         Displays the landing page
