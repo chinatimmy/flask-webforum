@@ -16,8 +16,10 @@ Demo @ https://goblinnet.xyz
 To start the server, run these commands!
 
     touch data.sqlite
-    /Bash/       export FLASK_APP=forum.py
-    /Powershell/ $env:FLASK_APP = "forum"
+    #Bash       
+    export FLASK_APP=forum.py
+    #Powershell 
+    $env:FLASK_APP = "forum"
     flask run
 
 ## Most of our contributers are autistic, please bear that in mind
