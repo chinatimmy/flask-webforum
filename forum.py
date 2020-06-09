@@ -84,24 +84,32 @@ class Post(DB.Model):
 @app.route('/', methods=['GET'])
 def null():
     codes = random.choice([307, 303])
-    riteroute = random.choice(['null', 'land1', 'land2'])
+    riteroute = random.choice(['land1', 'land2', 'land3'])
     sleepytime = random.choice([.5,.2,.3])
     sleep(sleepytime)
     return redirect(url_for(riteroute), code=codes)
 
-@app.route('/ping/' + rand2, methods=['GET'])
+@app.route('/ping-' + rand2, methods=['GET'])
 def land1():
     codes = random.choice([307, 303])
-    riteroute = random.choice(['posts', 'null', 'land2'])
+    riteroute = random.choice(['land3', 'land2'])
     sleepytime = random.choice([.1,.2,.3])
     sleep(sleepytime)
     return redirect(url_for(riteroute), code=codes)
 
-@app.route('/pong/' + rand2, methods=['GET'])
+@app.route('/pong-' + rand2, methods=['GET'])
 def land2():
     codes = random.choice([307, 303])
-    riteroute = random.choice(['posts', 'null', 'land1'])
+    riteroute = random.choice(['land3', 'land1'])
     sleepytime = random.choice([.6,.9,.4])
+    sleep(sleepytime)
+    return redirect(url_for(riteroute), code=codes)
+
+@app.route('/ding-' + rand2, methods=['GET'])
+def land3():
+    codes = random.choice([307, 303])
+    riteroute = random.choice(['posts', 'land1', 'land2'])
+    sleepytime = random.choice([.1,.5,.1])
     sleep(sleepytime)
     return redirect(url_for(riteroute), code=codes)
 
