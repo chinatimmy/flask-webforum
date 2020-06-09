@@ -25,8 +25,6 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 rand1 = str(uuid.uuid4())
 rand2 = str(uuid.uuid4())
-rand3 = str(uuid.uuid4())
-rand4 = str(uuid.uuid4())
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 SQL_ALCH_URL = "SQLALCHEMY_DATABASE_URI"
 app.config[SQL_ALCH_URL] = "sqlite:///" + os.path.join(BASEDIR, 'data.sqlite')
@@ -86,23 +84,31 @@ class Post(DB.Model):
 @app.route('/', methods=['GET'])
 def null():
     codes = random.choice([307, 303])
-    riteroute = random.choice(['null', 'null', 'land'])
-    sleepytime = random.choice([1,2,3])
+    riteroute = random.choice(['null', 'land1', 'land2'])
+    sleepytime = random.choice([.5,.2,.3])
     sleep(sleepytime)
     return redirect(url_for(riteroute), code=codes)
 
-@app.route('/b/' + rand2 + "/bb/" + rand3, methods=['GET'])
-def land():
+@app.route('/ping/' + rand2, methods=['GET'])
+def land1():
     codes = random.choice([307, 303])
-    riteroute = random.choice(['posts', 'null', 'land'])
-    sleepytime = random.choice([1,2,3])
+    riteroute = random.choice(['posts', 'null', 'land2'])
+    sleepytime = random.choice([.1,.2,.3])
+    sleep(sleepytime)
+    return redirect(url_for(riteroute), code=codes)
+
+@app.route('/pong/' + rand2, methods=['GET'])
+def land2():
+    codes = random.choice([307, 303])
+    riteroute = random.choice(['posts', 'null', 'land1'])
+    sleepytime = random.choice([.6,.9,.4])
     sleep(sleepytime)
     return redirect(url_for(riteroute), code=codes)
 
 '''
 -END ANTI BOT-
 '''
-@app.route('/a/' + rand1 + "/aa/" + rand3 + "/aaa/" + rand2, methods=['GET', 'POST'])
+@app.route('/post/' + rand1, methods=['GET', 'POST'])
 def posts():
     '''
         Displays the landing page
