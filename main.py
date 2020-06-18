@@ -1,7 +1,4 @@
-import os
-import hashlib
 from fastapi import FastAPI
-from time import strftime, sleep
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
