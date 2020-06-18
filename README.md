@@ -1,3 +1,5 @@
+# WE API NOW FASTAPI IS SUPERIOUR
+
 ![logo](https://raw.githubusercontent.com/chinatimmy/flask-webforum/images/fwftxtboard.png)
 
 # Flask Web Forum in Python3!
@@ -15,12 +17,7 @@ Demo @ https://goblinnet.xyz
 
 To start the server, run these commands!
 
-    touch data.sqlite
-    #Bash       
-    export FLASK_APP=forum.py
-    #Powershell 
-    $env:FLASK_APP = "forum"
-    flask run
+KEK
 
 ## Most of our contributers are autistic, please bear that in mind
 ![autism](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pinmart.com%2Fassets%2F1%2F6%2FDimRegular%2F91front_1k_16.jpg)
