@@ -20,6 +20,42 @@ KEK
 ![autism](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pinmart.com%2Fassets%2F1%2F6%2FDimRegular%2F91front_1k_16.jpg)
 - We may mean what we say, but we won't say what we mean.
 
+## Why use FWF?
+
+- Work efficient framework
+
+- Word class forum software
+
+- Core competency based development 
+
+- Sustainably administrated 
+
+- Growing market share
+
+- Built on proven methodology
+
+- Quality adjacent 
+
+- Enhancing to your work flow
+
+- Computer viable 
+
+- Diversity out of the box
+
+- Distilled in a flask
+
+- User Centric
+
+- Monetized out of pocket
+
+- Change to disruption pipeline 
+
+- Value learned design 
+
+- Created for growth
+
+- Asset creation by osmosis design 
+
 
 ## How to follow or contribute?
 
